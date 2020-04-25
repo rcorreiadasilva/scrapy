@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Register a New Consumption for Apartment <%= @apartment.floor %> <%= @apartment.door.capitalize %></h1>
+
+
+
+  <%= render 'form', consumption: @consumption %>
+
+  <%= link_to 'Back', apartment_path(@apartment) %>
+</div>
+

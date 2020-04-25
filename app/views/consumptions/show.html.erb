@@ -1,0 +1,21 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p> Consumptions for apartment </p> <%=  @consumption.apartment_id   %> <p> at building </p> <%#= "#{apartment.building}" %><%#= @consumption.apartment_id.building %>
+
+
+  <ul>
+    <li>Initial Consumption: <%= @consumption.inireading %></li>
+    <li>Current Consumption: <%= @consumption.lastreading %></li>
+    <li>Total consumed: <%= @consumption.lastreading - @consumption.inireading %> </li>
+    <li>payment status <%= @consumption.paid %> </li>
+  </ul>
+
+
+
+  <%#= link_to 'Edit', edit_apartment_consumption_path(@consumption) %> |
+
+
+
+
+</div>

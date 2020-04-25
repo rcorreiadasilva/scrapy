@@ -1,0 +1,45 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+<div class="row mb-5">
+  <div class="col-1">
+    <%= link_to 'Home', root_path %>
+  </div>
+  <div class="col-1">
+    <%= link_to 'Apartments', apartments_path %>
+  </div>
+  <div class="col ">
+    <h1 class="text-center">Tenants</h1>
+  </div>
+  <div class="col-1">
+      <%= link_to 'Back', root_path  %>
+  </div>
+</div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tenants.each do |tenant| %>
+      <div class="card-product mb-3">
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+      <div class="card-product-infos">
+        <h2 class="text-reset"><%= link_to "#{tenant.first_name.upcase} #{tenant.last_name.upcase}" , tenant %> </h2>
+         <p> <strong> Apartment <%= tenant.apartment.floor %> <%= tenant.apartment.door.capitalize %></strong>  </p>
+         <p> <%= tenant.apartment.building %> </p>
+      </div>
+    </div>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Home', root_path %>
+<%#= link_to 'New tenant', new_tenant_path %>
+
+
+</div>

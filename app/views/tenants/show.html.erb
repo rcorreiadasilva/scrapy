@@ -1,0 +1,24 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p> Tenant </p>
+
+  <ul>
+    <li>Name: <%= @tenant.first_name %> <%= @tenant.last_name %> </li>
+    <li>Contact: <%= @tenant.phone %></li>
+    <li>Email: <%= @tenant.email  %> </li>
+    <li>Apartment <%= @tenant.apartment.floor %> <%= @tenant.apartment.door.upcase %></li>
+  </ul>
+
+
+
+  <%#= link_to 'Edit', edit_tenant_path(@tenant) %> |
+  <%= link_to 'Back', tenants_path %> |
+  <%#= link_to 'Delete', tenant_path(@tenant), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-lg btn-danger btn-sm' %>
+
+  <button id="sweet-alert-demo" class="btn btn-danger">Delete </button>
+<%= link_to "", tenant_path(@tenant), method: :delete, id: "delete-link", class: "hidden" %>
+
+
+</div>
+
